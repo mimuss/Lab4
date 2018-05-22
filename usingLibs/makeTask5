@@ -1,0 +1,12 @@
+CC=gcc
+
+all: statically-linked
+
+statically-linked : 
+	$(CC) -pthread -static main.o utils.o -L../libs -l_s -o statically-linked
+	
+use-shared-library : 
+	$(CC) -pthread main.o utils.o -o use-shared-library -L../libs -l_d
+	
+clean :
+	rm statically-linked use-shared-library

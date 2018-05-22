@@ -1,0 +1,9 @@
+CC=gcc
+
+all: zombie
+
+zombie : zombie.c
+	$(CC) -o zombie zombie.c
+
+clean :
+	rm zombie

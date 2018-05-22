@@ -1,0 +1,10 @@
+CC=gcc
+
+all: parallel_min_max
+    
+
+parallel_min_max : parallel_min_max.c
+	$(CC) -o parallel_min_max utils.c find_min_max.c parallel_min_max.c
+
+clean :
+	rm parallel_min_max
